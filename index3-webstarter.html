@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body{
+            background-color: pink;
+        }
+        #website{
+            opacity:0;
+            scale: 0;
+            transition: 1s;
+        }
+        .start{
+            position: absolute;
+            display: flex;
+            width: 800px;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 150px;
+            /* border: 2px solid black; */
+            box-shadow: 3px 3px 5px 6px rgba(71, 38, 66, 0.425);
+            background-color: whitesmoke;
+            background-image: url(./gradient-background-vector-spring-colors_53876-117271.jpg);
+            background-position: center;
+            background-size: cover;
+            transition: 1s;
+            border: 1px solid pink;
+            box-shadow: 3px 3px 5px 4px rgba(71, 38, 66, 0.425);
+            border-radius: 3px;
+
+        }
+        .start>h1{
+            color:rgba(71, 38, 66, 0.425) ;
+            position: absolute;
+            top: 130px;
+            left: 200px;
+        }
+        .start>p{
+            font-weight: bold;
+        }
+        .start>button{
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            bottom: 30px;
+            left: 350px;
+            background-color: rgba(255, 192, 203, 0.11);
+            font-weight: bold;
+            border: 1px solid pink;
+            box-shadow: 3px 3px 5px 4px rgba(71, 38, 66, 0.425);
+            color: rgba(71, 38, 66, 0.425);
+        }
+        .web{
+            position: absolute;
+            display: flex;
+            width: 800px;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 150px;
+            /* border: 1px solid black; */
+            background-color: whitesmoke;
+
+        }
+        .web>.adress{
+            height: 500px;
+            border: 2px solid color rgba(71, 38, 66, 0.425);;
+        }
+        .web>.adress>div>span{
+            margin-top: 200px;
+        }
+        .web>.adress>h1{
+            margin-top: 20px;
+            margin-bottom: 50px;
+            color: rgba(71, 38, 66, 0.425);
+        }
+        .web>.adress>input{
+            margin: 15px;
+            border: 1px solid rgb(185, 120, 171);
+        }
+        .web>.adress>label{
+           color:rgba(71, 38, 66, 0.425) ;
+        }
+        .web>.adress>button{
+            margin: 15px;
+            font-weight: bold;
+            border: 1px solid pink;
+            box-shadow: 3px 3px 5px 4px rgba(71, 38, 66, 0.425);
+            color: rgba(71, 38, 66, 0.425);
+        }
+        .rewrite{
+            height: 500px;
+            overflow-y: scroll;
+            border: 1px solid pink;
+            box-shadow: 3px 3px 5px 4px rgba(71, 38, 66, 0.425);
+        }
+        .rewrite>ul>h3{
+            margin-top: 25px;
+            margin-bottom: 30px;
+            color:rgba(71, 38, 66, 0.425);
+        }
+        .rewrite>button:nth-of-type(1){
+            position: absolute;
+            bottom: 35px;
+            left: 650px;
+            width: 80px;
+            height: 40px;
+            font-weight: bold;
+            border: 1px solid pink;
+            box-shadow: 3px 3px 5px 4px rgba(71, 38, 66, 0.425);
+            color:rgba(71, 38, 66, 0.425);
+
+        }
+        .rewrite>button:nth-of-type(2){
+            position: absolute;
+            bottom: 35px;
+            left: 450px;
+            width: 80px;
+            height: 40px;
+            font-weight: bold;
+            border: 1px solid pink;
+            box-shadow: 3px 3px 5px 4px rgba(71, 38, 66, 0.425);
+            color:rgba(71, 38, 66, 0.425);
+        }
+        .rewrite>button:nth-of-type(3){
+            position: absolute;
+            bottom: 35px;
+            left: 550px;
+            width: 80px;
+            height: 40px;
+            font-weight: bold;
+            border: 1px solid pink;
+            box-shadow: 3px 3px 5px 4px rgba(71, 38, 66, 0.425);
+            color:rgba(71, 38, 66, 0.425);
+        }
+        #list{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="open" class="row col-12">
+            <div class="start col-12">
+                <h1>Hi there!</h1>
+                <p class="col-6">Thank you for signing up for our newsletter. We appreciate your interest.We will do our best to be usefull.</p>
+                <button onclick="_open()">Open</button>
+            </div>
+            </div>
+            </div>
+            <div class="container">
+                <div id="website" class="row web">
+                    <div class="adress col-6">
+                    <h1>Let's know you!</h1>
+                    <label for="">Name : </label>  
+                    <input id="name" class='col-10' type="text" placeholder="Name">
+                    <label for="">Score : </label>  
+                    <input id="num" class="col-10" type="text" placeholder="Number">
+                    <button onclick="send()" class="col-4">Send</button>
+                    <div class="col-12"><span id="result"></span></div>
+                </div>
+                    <div class="rewrite col-6">
+                        <ul id="list"><h3>
+                            The List of your Team ↷
+                        </h3>
+                            <li>
+                                <h4></h4>
+                            </li>
+                        </ul>
+                        <button onclick="min()" class="min">Min</button>
+                        <button onclick="max()" class="min">Max</button>
+                        <button onclick="avg()" class="min">Avrg</button>
+                    </div>
+                </div>
+            </div>
+</body>
+<script>
+    function _open(){
+        document.getElementById('open').style.transform="translateX(-1200px)"
+        document.getElementById('website').style.opacity='1'
+        document.getElementById('website').style.scale='1'
+    }
+    let _name = document.getElementById('name')
+    let _number = document.getElementById('num')
+    let _number2 =[]
+    let _list =[]
+    let _score=[]
+    let i=0
+    function send(){
+        _score[i] = parseInt(_number.value)
+        _list[i] = _name.value 
+        _number2[i] = i + 1
+        if( (_name.value) == '' && (_number.value) == ''){
+            _name.style.border='2px solid red'
+            _number.style.border='2px solid red'
+            _name.focus()
+            _number.focus()
+        }else{
+           document.getElementById('list').innerHTML+=`
+           <li>
+                                <h4>${_number2[i] + '-' +  _list[i] + '        ' + _score[i]}</h4>
+                               
+                            </li>
+                            `
+        _name.value=null                    
+        _number.value=null 
+        _name.focus()                   
+        _number.focus() 
+        i++                       
+        }
+    
+    }
+    function min(){
+        let _min = Math.min(..._score)
+        for(i=0 ; i<_score.length ; i++){
+            if(_min == _score[i]){
+                let x = i
+                
+            
+            let mi = _list[x]
+            document.getElementById('result').innerHTML='Minimom Score is'+' ' + _min +' '+ 'for' +' '+ mi
+        }
+        }
+      }
+    function max(){
+        let _max = Math.max(..._score)
+        for(i=0 ; i<_score.length ; i++){
+            if(_max == _score[i]){
+                let x = i
+                
+            
+            let ma = _list[x]
+            document.getElementById('result').innerHTML='Maximum Score is'+' ' + _max +' '+ 'for' +' '+ ma
+        }
+        }
+      }
+      let total=0
+      let _ava=0
+      function avg(){
+        for(i=0; i< _score.length; i++){
+            let tot=_score[i]
+            total +=tot
+        }
+        _ava= (total/(_score.length))
+        document.getElementById('result').innerHTML='Average Score is'+' ' +_ava
+      }
+</script>
+</html>
